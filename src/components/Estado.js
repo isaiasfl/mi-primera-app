@@ -6,7 +6,9 @@ Luego en el estado se debe de almacener lo que quiero
 cambiar dinámicamente.
 El estado en una clase se hace con this.state y es un objeto inmutable.
 Sólo se puede modificar con un método especial llamado setState()
- */
+El estado está en la variable state.
+
+*/
 export default class Estado extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +20,7 @@ export default class Estado extends Component {
     return (
       <>
         <h1>Componente Estado</h1>
-        <h2>{this.state.contador}</h2>
+        <h2>{this.setState({ contador: this.state.contador + 1 })}</h2>
       </>
     );
   }
